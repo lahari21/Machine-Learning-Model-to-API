@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+</head>
+<button onclick="history.back()">Go Back</button>
+<h1> The page shows the top 5 predictions of the input image. </h1>
+<body>
+  <dl>
+    {% for item in data %}
+    <dt>{{item}}{{item.prob}}</dt>
+    <dd><dd>
+    {% endfor %}
+  </dl>
+
+</body>
+</html>
