@@ -6,12 +6,23 @@
 <button onclick="history.back()">Go Back</button>
 <h1> The page shows the top 5 predictions of the input image. </h1>
 <body>
-  <dl>
-    {% for item in data %}
-    <dt>{{item}}{{item.prob}}</dt>
-    <dd><dd>
-    {% endfor %}
-  </dl>
+   <table>
+  <thead>
+    <tr>
+      <th>Labels</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for key, value in data.items() %}
+   <tr>
+       <td> {{ key }} </td>
+       <td> {{ value }} </td>
+   </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
 
 </body>
 </html>
